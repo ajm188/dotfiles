@@ -64,9 +64,39 @@ function git_prompt_string {
   [ -n "$git_where" ] && echo " %{$fg[blue]%}git:(${PR_BOLD_RED}${git_where#(refs/heads/|tags/)}%{$fg[blue]%})$(parse_git_state)%{$reset_color%}"
 }
 
+function parse_hg_branch {
+  hg branch 2> /dev/null
+}
+
+function parse_hg_state {
+  local HG_STATE=''
+
+  # Just reuse the git states
+  if [[ -n $(hg status -u 2> /dev/null) ]]; then
+    HG_STATE=$HG_STATE$GIT_PROMPT_UNTRACKED
+  fi
+
+  if [[ -n $(hg status -m 2> /dev/null) ]]; then
+    HG_STATE=$HG_STATE$GIT_PROMPT_MODIFIED
+  fi
+
+  if [[ -n $(hg status -a 2> /dev/null) ]]; then
+    HG_STATE=$HG_STATE$GIT_PROMPT_STAGED
+  fi
+
+  if [[ -n $HG_STATE ]]; then
+    echo "$GIT_PROMPT_PREFIX$HG_STATE$GIT_PROMPT_SUFFIX"
+  fi
+}
+
+function hg_prompt_string {
+  local hg_where="$(parse_hg_branch)"
+  [ -n "$hg_where" ] && echo " %{$fg[blue]%}hg:(${PR_BOLD_RED}${hg_where}%{$fg[blue]%})$(parse_hg_state)%{$reset_color%}"
+}
+
 function current_pwd {
   echo $(pwd | sed -e "s,^$HOME,~,")
 }
 
 PROMPT='
-${PR_GREEN}%n@$(box_name)%{$reset_color%}${PR_BOLD_WHITE}:%{$reset_color%}${PR_BOLD_YELLOW}$(current_pwd)%{$reset_color%}$(git_prompt_string)$(prompt_char) '
+${PR_GREEN}%n@$(box_name)%{$reset_color%}${PR_BOLD_WHITE}:%{$reset_color%}${PR_BOLD_YELLOW}$(current_pwd)%{$reset_color%}$(git_prompt_string)$(hg_prompt_string)$(prompt_char) '
