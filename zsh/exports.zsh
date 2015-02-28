@@ -1,7 +1,7 @@
 # PATH exports in ~/.zshrc
 
 # set up java home
-export JAVA_HOME=/System/Library/Frameworks/Java/1.7/Home
+export JAVA_HOME=$(/usr/libexec/java_home)
 
 # turn on terminal colors
 export TERM=xterm-256color
