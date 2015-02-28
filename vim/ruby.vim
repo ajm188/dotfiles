@@ -14,8 +14,7 @@ function! ToggleComment(toggle_on)
   if a:toggle_on
     normal ^i# 
   else
-    normal 0
-    normal /#<cr>
+    normal ^
     normal dw
   endif
 endfunction
@@ -32,7 +31,8 @@ function! s:body(name)
   let @x = a:name
   normal "xp
   normal oend
-  normal ko  
+  normal ko 
+  normal x
 endfunction
 
 map <leader>c :call Class()<cr>
