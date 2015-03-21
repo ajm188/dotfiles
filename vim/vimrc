@@ -5,9 +5,25 @@ call vundle#rc()
 
 Plugin 'gmarik/vundle'
 Plugin 'thoughtbot/vim-rspec'
+Plugin 'itchyny/lightline.vim'
 
 filetype plugin indent on
 
+" configure lightline
+let g:Powerline_symbols = 'fancy'
+set laststatus=2
+set noshowmode " don't have vim show things that lightline already shows
+
+let g:lightline = {
+      \ 'colorscheme' : 'wombat',
+      \ 'active'      : {
+      \   'left': [ [ 'mode', 'paste' ] ]
+      \},
+      \ 'separator'   : { 'left': "\u2b80", 'right': "\u2b82" },
+      \ 'subseparator': { 'left': "\u2b81", 'right': "\u2b83" },
+      \}
+
+" plain-old configuration
 syntax enable
 colorscheme molokai
 
