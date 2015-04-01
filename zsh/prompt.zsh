@@ -61,7 +61,7 @@ function parse_git_state {
 
 function git_prompt_string {
   local git_where="$(parse_git_branch)"
-  [ -n "$git_where" ] && echo " %{$fg[blue]%}git:(${PR_BOLD_RED}${git_where#(refs/heads/|tags/)}%{$fg[blue]%})$(parse_git_state)%{$reset_color%}"
+  [ -n "$git_where" ] && echo " %{$fg_bold[blue]%}git:(${PR_BOLD_RED}${git_where#(refs/heads/|tags/)}%{$fg[blue]%})$(parse_git_state)%{$reset_color%}"
 }
 
 function parse_hg_branch {
@@ -91,7 +91,7 @@ function parse_hg_state {
 
 function hg_prompt_string {
   local hg_where="$(parse_hg_branch)"
-  [ -n "$hg_where" ] && echo " %{$fg[blue]%}hg:(${PR_BOLD_RED}${hg_where}%{$fg[blue]%})$(parse_hg_state)%{$reset_color%}"
+  [ -n "$hg_where" ] && echo " %{$fg_bold[blue]%}hg:(${PR_BOLD_RED}${hg_where}%{$fg[blue]%})$(parse_hg_state)%{$reset_color%}"
 }
 
 function current_pwd {
