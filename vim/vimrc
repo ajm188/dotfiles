@@ -17,7 +17,7 @@ set noshowmode " don't have vim show things that lightline already shows
 let g:lightline = {
       \ 'colorscheme' : 'wombat',
       \ 'active'      : {
-      \   'left': [ [ 'mode', 'paste' ] ]
+      \   'left': [ [ 'mode', 'paste', 'filename', 'modified' ] ]
       \},
       \ 'separator'   : { 'left': "\u2b80", 'right': "\u2b82" },
       \ 'subseparator': { 'left': "\u2b81", 'right': "\u2b83" },
@@ -33,6 +33,8 @@ set cursorline
 
 set complete+=kspell
 
+set foldmethod=indent
+
 set smartindent
 set tabstop=2
 set shiftwidth=2
@@ -47,7 +49,9 @@ map <leader>a :call RunAllSpecs()<cr>
 
 augroup configgroup
   autocmd BufEnter Makefile setlocal noexpandtab
+  autocmd BufNewFile,BufRead *.html.erb setlocal noexpandtab tabstop=4 shiftwidth=4
   autocmd FileType java setlocal tabstop=4 shiftwidth=4
   autocmd FileType ruby source ~/.vim/ruby.vim
+  autocmd FileType python source ~/.vim/python.vim
   autocmd BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
 augroup END
