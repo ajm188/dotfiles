@@ -1,13 +1,5 @@
-function! Def()
-  :call s:body("def " . input("Method name: "))
-endfunction
-
-function! Class()
-  :call s:body("class " . input("Class name: "))
-endfunction
-
-function! Module()
-  :call s:body("module " . input("Module name: "))
+function! EvalBuffer()
+  call RunShellCommand("ruby %")
 endfunction
 
 function! ToggleComment(toggle_on)
@@ -19,25 +11,10 @@ function! ToggleComment(toggle_on)
   endif
 endfunction
 
-function! InlineRefactor()
-  normal ^*dw
-  normal ``d2w
-  normal "ad$
-  normal dd
-  normal ``h"ap
-endfunction
-
-function! s:body(name)
-  let @x = a:name
-  normal "xp
-  normal oend
-  normal ko 
-  normal x
-endfunction
-
-map <leader>c :call Class()<cr>
-map <leader>d :call Def()<cr>
-map <leader>m :call Module()<cr>
 map <leader>lc :call ToggleComment(1)<cr>
 map <leader>uc :call ToggleComment(0)<cr>
-map <leader>ir :call InlineRefactor()<cr>
+map <leader>e :call EvalBuffer()<cr>
+map <leader>f :call RunCurrentSpecFile()<cr>
+map <leader>s :call RunNearestSpec()<cr>
+map <leader>l :call RunLastSpec()<cr>
+map <leader>a :call RunAllSpecs()<cr>

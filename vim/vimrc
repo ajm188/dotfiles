@@ -42,11 +42,6 @@ set expandtab
 
 :let mapleader=","
 
-map <leader>f :call RunCurrentSpecFile()<cr>
-map <leader>s :call RunNearestSpec()<cr>
-map <leader>l :call RunLastSpec()<cr>
-map <leader>a :call RunAllSpecs()<cr>
-
 augroup configgroup
   autocmd BufEnter Makefile setlocal noexpandtab
   autocmd BufNewFile,BufRead *.html.erb setlocal noexpandtab tabstop=4 shiftwidth=4
