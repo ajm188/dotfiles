@@ -5,7 +5,12 @@ call vundle#rc()
 
 Plugin 'gmarik/vundle'
 Plugin 'thoughtbot/vim-rspec'
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'itchyny/lightline.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'fatih/vim-go'
+Plugin 'rust-lang/rust.vim'
+Plugin 'scrooloose/syntastic'
 
 filetype plugin indent on
 
@@ -23,9 +28,21 @@ let g:lightline = {
       \ 'subseparator': { 'left': "\u2b81", 'right': "\u2b83" },
       \}
 
+" configure syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 " plain-old configuration
 syntax enable
-colorscheme molokai
+set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized
 
 set number
 set showcmd
@@ -44,9 +61,14 @@ set expandtab
 
 augroup configgroup
   autocmd BufEnter Makefile setlocal noexpandtab
-  autocmd BufNewFile,BufRead *.html.erb setlocal noexpandtab tabstop=4 shiftwidth=4
   autocmd FileType java setlocal tabstop=4 shiftwidth=4
   autocmd FileType ruby source ~/.vim/ruby.vim
   autocmd FileType python source ~/.vim/python.vim
+  autocmd FileType go source ~/.vim/go.vim
   autocmd BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
+  autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 augroup END
+
+" clear the t_ut setting to disable Background Color Erase
+" (only an issue in tmux)
+:set t_ut=
