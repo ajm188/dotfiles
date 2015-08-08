@@ -1,7 +1,7 @@
 # vim
 wd=$(pwd -P)
-ln -Fs $wd/vim $HOME/.vim
-ln -fhs $wd/vim/vimrc $HOME/.vimrc
+ln -fhs $wd/vim/.vim $HOME/.vim
+ln -fhs $wd/vim/.vimrc $HOME/.vimrc
 vim +PluginInstall +qall
 
 # bash
