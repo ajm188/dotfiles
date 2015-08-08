@@ -58,6 +58,10 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
 
+if [ -f $HOME/.rvm/scripts/rvm ]; then
+  . $HOME/.rvm/scripts/rvm
+fi
+
 export TERM=xterm-256color
 export CLICOLOR=1
 # vim is always the answer. always.
