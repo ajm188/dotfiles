@@ -77,10 +77,10 @@ function git_sha {
   local head="$(git rev-parse --abbrev-ref HEAD 2> /dev/null)"
   [ -z "$head" ] && return
   if [[ "$head" = "HEAD" ]]; then
-    echo '('`git rev-parse --short HEAD`'...)'
-  else
-    echo '('"$head"')'
+    head="$(git rev-parse --short HEAD 2> /dev/null)"
+    [ -z "$head" ] && echo '(no HEAD)' && return
   fi
+  echo '('"$head"')'
 }
 
 export PS1="\[$bold_green\]\u@\h:\[$bold_yellow\]\w \[$hi_bold_blue\]"'$(git_sha)'"\[$hi_bold_green\]"'$(prompt_char)'"\[$reset\] "
