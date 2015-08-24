@@ -79,6 +79,7 @@ function git_sha {
   if [[ "$head" = "HEAD" ]]; then
     head="$(git rev-parse --short HEAD 2> /dev/null)"
     [ -z "$head" ] && echo '(no HEAD)' && return
+    head="$head..."
   fi
   echo '('"$head"')'
 }
