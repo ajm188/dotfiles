@@ -43,11 +43,13 @@ hi_bold_cyan='\e[1;96m'
 reset='\e[0m'
 
 # Provide convenient access to a JavaScript console
-alias jsc=/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc
 
 # Set a bunch of environment variables
 if [[ $IS_MAC = 1 ]]; then
   export JAVA_HOME=$(/usr/libexec/java_home)
+  if [ -x /System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc ]; then
+    alias jsc=/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc
+  fi
 fi
 if [[ $IS_LINUX = 1 ]]; then
   # export JAVA_HOME=???
