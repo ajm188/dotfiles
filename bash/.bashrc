@@ -64,6 +64,10 @@ if [ -f $HOME/.rvm/scripts/rvm ]; then
   . $HOME/.rvm/scripts/rvm
 fi
 
+if [ -d $HOME/scripts ]; then
+  export PATH=$PATH:$HOME/scripts
+fi
+
 export TERM=xterm-256color
 export CLICOLOR=1
 # vim is always the answer. always.
