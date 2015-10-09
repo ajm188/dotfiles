@@ -13,7 +13,7 @@ yesno () {
 
 # vim
 ln -fs $wd/vim/.vim $HOME/.vim
-if [ !-d $HOME/.vim/bundle/Vundle.vim ]
+if [ ! -d $HOME/.vim/bundle/Vundle.vim ]; then
   # give the people vundle if they don't have it
   git clone git@github.com:gmarik/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 fi
