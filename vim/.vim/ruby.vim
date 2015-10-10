@@ -35,8 +35,8 @@ if !exists('*OpenSpec')
       echo 'Already in spec file'
       return
     endif
-    let l:path=split(expand('%'), '/')[1:-2]
-    let l:spec_to_open='spec/' . join(path, '/') . substitute(filename, '\.rb', '_spec.rb', '')
+    let l:path=['spec'] + split(expand('%'), '/')[1:-2]
+    let l:spec_to_open=join(path, '/') . '/' . substitute(filename, '\.rb', '_spec.rb', '')
     exe "e " . l:spec_to_open
   endfunction
 
