@@ -50,12 +50,14 @@ set cursorline
 set complete+=kspell
 
 set foldmethod=indent
+set foldlevel=3
 
 set smartindent
 set tabstop=2
 set shiftwidth=2
 set expandtab
 set ruler
+set autoread
 
 augroup configgroup
   autocmd BufEnter Makefile setlocal noexpandtab
