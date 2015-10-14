@@ -1,3 +1,4 @@
+set sw=2 ts=2 sts=2
 function! ToggleComment(toggle_on)
   if a:toggle_on
     normal ^i# 
