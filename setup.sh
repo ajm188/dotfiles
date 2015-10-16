@@ -2,11 +2,11 @@ wd=$(pwd -P)
 
 # https://stackoverflow.com/questions/226703/how-do-i-prompt-for-input-in-a-linux-shell-script
 yesno () {
-    echo $1
-    select yn in "Yes" "No"; do
+    while true; do
+        read -p "$1 [y/n]" yn
         case $yn in
-            Yes ) return 0; break;;
-            No ) return 1;;
+            [Yy]* ) return 0; break;;
+            [Nn]* ) return 1;;
         esac
     done
 }
