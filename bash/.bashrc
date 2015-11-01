@@ -90,4 +90,8 @@ function git_sha {
   echo '('"$head"')'
 }
 
+alias g=git
+complete -o default -o nospace -F _git g
+alias v=vim
+
 export PS1="\[$bold_green\]\u@\h:\[$bold_yellow\]\w \[$hi_bold_blue\]"'$(git_sha)'"\[$hi_bold_green\]"'$(prompt_char)'"\[$reset\] "
