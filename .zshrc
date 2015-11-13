@@ -1,3 +1,5 @@
+export EDITOR=vim
+
 setopt PROMPT_SUBST
 
 function git_branch() {
