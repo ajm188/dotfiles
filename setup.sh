@@ -12,19 +12,19 @@ yesno () {
 }
 
 # vim
-ln -fs $wd/vim/.vim $HOME/.vim
+ln -fs $wd/.vim $HOME/.vim
 if [ ! -d $HOME/.vim/bundle/Vundle.vim ]; then
   # give the people vundle if they don't have it
   git clone git@github.com:gmarik/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 fi
-ln -fs $wd/vim/.vimrc $HOME/.vimrc
+ln -fs $wd/.vimrc $HOME/.vimrc
 vim +PluginInstall +qall
 
 # bash
 if yesno "Do you want to install .bashrc?"; then
-    ln -fs $wd/bash/.bashrc $HOME/.bashrc
+    ln -fs $wd/.bashrc $HOME/.bashrc
     if [[ $(uname) = 'Darwin' ]]; then
-        echo 'symlinked bash/.bashrc to $HOME/.bashrc'
+        echo 'symlinked .bashrc to $HOME/.bashrc'
         echo 'you should probably have your .bash_profile source $HOME/.bashrc, or symlink .bash_profile yourself'
     fi
 fi
