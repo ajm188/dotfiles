@@ -8,6 +8,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'fatih/vim-go'
 Plugin 'kien/ctrlp.vim'
+Plugin 'Yggdroot/indentLine'
 
 call vundle#end()
 
@@ -67,7 +68,6 @@ set autoread
 set laststatus=2
 set showtabline=2
 
-set list listchars=tab:>-,trail:· " show tabs and trailing spaces
 set tabstop=4
 set shiftwidth=4
 set expandtab
