@@ -39,16 +39,24 @@ endfunction
 inoremap <expr> <tab> TabWrap()
 inoremap <s-tab> <c-n>
 
-" SYNTAX HL AND COLOR "
-syntax enable
-set background=dark
-let g:solarized_termcolors=256
-colorscheme solarized
+" HIGHLIGHT SEARCHES "
+function! HighlightSearch()
+  :set hlsearch
+  return "\/"
+endfunction
+nmap <expr> / HighlightSearch()
+nmap <leader>hl :set nohlsearch<cr>
 
 " STATUSLINE "
 " Left column: filename, plus file type, format, encoding and mod status
 " Right column: line and column number, shifted left a bit
 set statusline=%<%f\ (%{&ft})\ [%{&ff}][%{&fenc}]%(%m%)%=%-10(%3l,%02c%03V%)
+
+" SYNTAX HL AND COLOR "
+syntax enable
+set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized
 
 " GENERAL CONFIG "
 set number
