@@ -1,2 +1,4 @@
 *.netrwhist
 .vim/bundle
+.config/fish/fishd.*
+*_history
