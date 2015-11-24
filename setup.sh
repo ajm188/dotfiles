@@ -36,3 +36,9 @@ if yesno "Do you want to install .config/fish?"; then
     mkdir -p $HOME/.config
     ln -fs $wd/.config/fish $HOME/.config/fish
 fi
+
+# tmux
+if yesno "Do you want to setup .tmux.conf?"; then
+    ln -fs $wd/.tmux.conf $HOME/.tmux.conf
+    echo 'updated .tmux.conf. you should restart sessions to have the changes take affect'
+fi
