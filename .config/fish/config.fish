@@ -6,3 +6,4 @@ end
 # I'll leave it here.
 set -U EDITOR vim
 set -U fish_user_abbreviations 'g=git'
+set -U fish_user_abbreviations $fish_user_abbreviations 'v=vim'
