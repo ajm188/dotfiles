@@ -6,7 +6,7 @@ set -x PATH $port_prefix/bin $port_prefix/sbin $PATH
 
 function pip-bin
     set -l my_pip (port select pip | grep active | sed -e 's/[^0-9]*//g')
-    port contents py$my_pip-pip | head -2 | tail -1 | sed -e 's:/[^/]*$::' | sed -e 's/ *//g'
+    port contents py$my_pip-pip | tail -n +2 | head -1 | sed -e 's:/[^/]*$::' | sed -e 's/ *//g'
 end
 
 set -x PATH (pip-bin) $PATH
@@ -25,9 +25,22 @@ function set-port-pip
         set i (math "$i + 1")
     end
     port select pip $argv
-    if test -n "$pip_bin_index"
-        set PATH[$pip_bin_index] (pip-bin)
-    else
-        set -x PATH (pip-bin) $PATH
+    switch $argv
+    case 'none'
+        if test -n "$pip_bin_index"
+            set -e PATH[$pip_bin_index]
+        end
+    case '*'
+        if test -n "$pip_bin_index"
+            set PATH[$pip_bin_index] (pip-bin)
+        else
+            set -x PATH (pip-bin) $PATH
+        end
     end
 end
+
+function __fish_set-port-pip_options
+    port select pip |  tail -n +2 | awk '{print $1}'
+end
+
+complete -f -c set-port-pip -a '(__fish_set-port-pip_options)'
