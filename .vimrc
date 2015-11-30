@@ -17,13 +17,9 @@ filetype plugin indent on
 " PLUGIN CONFIGURATIONS "
 let g:ctrlp_map = '<c-f>' " start Ctrl-P with <c-f>
 cnoremap <expr> %% expand('%:h').'/'
-" Ctrl-P, scoped to the current directory
-nnoremap <c-d> :CtrlP %%<cr>
-" Remap <cr> in Ctrl-P from :e to :tabn
-let g:ctrlp_prompt_mappings = {
-  \ 'AcceptSelection("e")': ['<c-e>'],
-  \ 'AcceptSelection("t")': ['<cr>', '<c-t>'], 
-  \}
+
+let g:indentLine_char = '┋'
+let g:indentLine_color_term = 239
 
 " LEADER KEY "
 :let mapleader=","
