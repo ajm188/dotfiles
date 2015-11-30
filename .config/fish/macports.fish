@@ -19,6 +19,7 @@ function set-port-pip
         switch $p
         case $old_pip_bin
             set pip_bin_index $i
+            break
         case '*'
         end
         set i (math "$i + 1")
