@@ -62,7 +62,7 @@ set cursorline
 set autoread
 
 set laststatus=2
-set showtabline=2
+set showtabline=1
 
 set tabstop=4
 set shiftwidth=4
@@ -74,6 +74,8 @@ set foldlevel=2
 
 set ignorecase
 set smartcase
+
+set textwidth=79
 
 " backspace stopped working when I upgraded to vim 7.4. I have no idea why.
 " http://vim.wikia.com/wiki/Backspace_and_delete_problems
