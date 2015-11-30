@@ -3,6 +3,8 @@ export EDITOR=vim
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 [[ -s "$HOME"/.rvm/scripts/rvm ]] && source "$HOME/.rvm/scripts/rvm"
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+export MANPATH=$MANPATH:/opt/local/share/man
 
 setopt PROMPT_SUBST
 
