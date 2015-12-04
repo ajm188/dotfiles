@@ -1,0 +1,49 @@
+[alias]
+    # stage
+    a = add
+    aa = add --all
+    unstage = reset HEAD --
+
+    # commit
+    c = commit
+
+    # diffs
+    d = diff
+    dc = diff --cached
+
+    # stash
+    sl = stash list
+    sp = stash pop
+    ss = stash save
+
+    # branches
+    b = branch
+    co = checkout
+    m = merge
+    rb = rebase
+
+    # remotes
+    ra = remote add
+    rsu = remote set-url
+
+    # status and logs
+    lol = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold yellow)%h%C(reset) - %C(bold green)(%ar)%C(reset) %s - %C(bold blue)%an%C(reset)%C(bold red)%d%C(reset)' --all
+    s = status -s
+    wtf = blame
+
+    ignored = ls-files -o -i --exclude-standard
+[branch]
+    autosetupmerge=true
+[color "branch"]
+    current = green bold
+[core]
+    editor = vim
+[github]
+    user = ajm188
+[push]
+    default = simple
+[url "git@github.com:"]
+    insteadOf = gh:
+[user]
+    name = Andrew Mason
+    email = mason@case.edu

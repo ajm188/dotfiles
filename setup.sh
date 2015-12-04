@@ -37,6 +37,10 @@ if yesno "Do you want to install .config/fish?"; then
     ln -fs $wd/.config/fish $HOME/.config/fish
 fi
 
+if yesno "Install .gitconfig ?"; then
+    ln -fs $wd/.gitconfig $HOME/.gitconfig
+fi
+
 # tmux
 if yesno "Do you want to setup .tmux.conf?"; then
     ln -fs $wd/.tmux.conf $HOME/.tmux.conf
