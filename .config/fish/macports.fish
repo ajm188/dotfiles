@@ -9,7 +9,7 @@ function pip-bin
     port contents py$my_pip-pip | tail -n +2 | head -1 | sed -e 's:/[^/]*$::' | sed -e 's/ *//g'
 end
 
-if port select pip ^/dev/null
+if port select pip >/dev/null ^/dev/null
     set -x PATH (pip-bin) $PATH
 end
 
