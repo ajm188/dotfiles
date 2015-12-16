@@ -4,7 +4,7 @@ function __fish_tmux_has_irssi_session
 end
 
 function irssi
-    if which tmux >/dev/null
+    if which tmux >/dev/null ^/dev/null
         if test -n "$TMUX"
             if not __fish_tmux_has_irssi_session
                 echo "Cannot create new session inside of a tmux session."

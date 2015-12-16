@@ -1,6 +1,6 @@
 function fish_greeting
-    if which fortune >/dev/null
-        if which cowsay >/dev/null
+    if which fortune >/dev/null ^/dev/null
+        if which cowsay >/dev/null ^/dev/null
             fortune | cowsay
         else
             fortune
