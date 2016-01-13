@@ -74,6 +74,12 @@ set smartcase
 
 set textwidth=79
 
+set equalalways
+set winheight=5
+set winminheight=5
+set winwidth=79
+set winminwidth=79
+
 " backspace stopped working when I upgraded to vim 7.4. I have no idea why.
 " http://vim.wikia.com/wiki/Backspace_and_delete_problems
 " #Backspace_key_won.27t_move_from_current_line fixes it
