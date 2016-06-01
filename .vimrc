@@ -8,7 +8,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'fatih/vim-go'
 Plugin 'kien/ctrlp.vim'
-Plugin 'Yggdroot/indentLine'
+Plugin 'rust-lang/rust.vim'
 
 call vundle#end()
 
@@ -17,9 +17,6 @@ filetype plugin indent on
 " PLUGIN CONFIGURATIONS "
 let g:ctrlp_map = '<c-f>' " start Ctrl-P with <c-f>
 cnoremap <expr> %% expand('%:h').'/'
-
-let g:indentLine_char = '┋'
-let g:indentLine_color_term = 239
 
 " LEADER KEY "
 :let mapleader=","
@@ -76,6 +73,12 @@ set ignorecase
 set smartcase
 
 set textwidth=79
+
+set equalalways
+set winheight=5
+set winminheight=5
+set winwidth=79
+set winminwidth=79
 
 " backspace stopped working when I upgraded to vim 7.4. I have no idea why.
 " http://vim.wikia.com/wiki/Backspace_and_delete_problems
