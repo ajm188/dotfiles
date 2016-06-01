@@ -6,6 +6,9 @@
 
     # commit
     c = commit
+    ci = commit -v
+    cia = commit -v --amend
+    cm = commit
 
     # diffs
     d = diff
