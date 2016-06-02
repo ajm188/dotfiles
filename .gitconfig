@@ -5,10 +5,9 @@
     unstage = reset HEAD --
 
     # commit
-    c = commit
     ci = commit -v
     cia = commit -v --amend
-    cm = commit
+    cm = commit -m
 
     # diffs
     d = diff
