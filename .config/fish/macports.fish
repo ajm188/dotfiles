@@ -1,5 +1,6 @@
 set -l port_prefix /opt/local
 set -x PATH $port_prefix/bin $port_prefix/sbin $PATH
+set -x LIBRARY_PATH $LIBRARY_PATH /opt/local/lib
 # This currently breaks man for non macports stuff, since $MANPATH is
 # empty? idk...
 # set -x MANPATH $port_prefix/share/man $MANPATH
