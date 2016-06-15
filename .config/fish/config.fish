@@ -20,4 +20,8 @@ if test -e $HOME/bin/
     set -x PATH $HOME/bin $PATH
 end
 
+if test -e $HOME/.cabal/bin/
+    set -x PATH $HOME/.cabal/bin $PATH
+end
+
 rvm default
