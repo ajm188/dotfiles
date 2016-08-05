@@ -1,5 +1,5 @@
-setlocal shiftwidth=4
-setlocal tabstop=4
+setlocal shiftwidth=8
+setlocal tabstop=8
 setlocal noexpandtab
 
 nmap <leader>b :w\|:!go build .<cr>
