@@ -39,6 +39,7 @@ function! HighlightSearch()
 endfunction
 nmap <expr> / HighlightSearch()
 nmap <leader>hl :set nohlsearch<cr>
+set incsearch
 
 " STATUSLINE "
 " Left column: filename, plus file type, format, encoding and mod status
