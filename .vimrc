@@ -15,8 +15,7 @@ call vundle#end()
 filetype plugin indent on
 
 " PLUGIN CONFIGURATIONS "
-let g:ctrlp_map = '<c-f>' " start Ctrl-P with <c-f>
-cnoremap <expr> %% expand('%:h').'/'
+let g:go_fmt_autosave=0
 
 " LEADER KEY "
 :let mapleader=","
