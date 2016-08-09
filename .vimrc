@@ -47,7 +47,6 @@ colorscheme solarized
 " GENERAL CONFIG "
 set number
 set showcmd
-set cursorline
 set autoread
 
 set laststatus=2
