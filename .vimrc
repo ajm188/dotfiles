@@ -72,6 +72,12 @@ set foldlevel=2
 set ignorecase
 set smartcase
 
+set noswapfile
+set nobackup
+set nowritebackup
+set backupdir=~/.tmp,~/tmp,/var/tmp,/tmp
+set directory=~/.tmp,~/tmp,/var/tmp,/tmp
+
 set textwidth=79
 
 set equalalways
