@@ -89,7 +89,7 @@ set winminwidth=79
 " backspace stopped working when I upgraded to vim 7.4. I have no idea why.
 " http://vim.wikia.com/wiki/Backspace_and_delete_problems
 " #Backspace_key_won.27t_move_from_current_line fixes it
-set backspace=2
+set backspace=indent,eol,start
 
 " MISC KEYMAPPINGS "
 " More keymappings in language-specific files
