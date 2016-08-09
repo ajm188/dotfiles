@@ -1,17 +1,6 @@
-" VUNDLE SETUP "
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'gmarik/Vundle.vim'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'fatih/vim-go'
-Plugin 'kien/ctrlp.vim'
-Plugin 'rust-lang/rust.vim'
-
-call vundle#end()
-
+execute pathogen#infect()
 filetype plugin indent on
 
 " PLUGIN CONFIGURATIONS "
