@@ -88,10 +88,16 @@ nnoremap <leader><leader> <c-^> " Quickly switch between current/prev buffers
 
 " AUTOCMDS "
 augroup configgroup
-  autocmd BufEnter Makefile set noexpandtab
-  autocmd FileType ruby source ~/.vim/ruby.vim
+  au!
   autocmd FileType python source ~/.vim/python.vim
   autocmd FileType go source ~/.vim/go.vim
   autocmd BufNewFile,BufRead COMMIT_EDITMSG set spell
-  autocmd BufNewFile,BufRead *.md set filetype=markdown
+  autocmd BufNewFile,BufRead *.md set filetype=markdown spell
+  autocmd BufEnter Makefile set noexpandtab
+  autocmd FileType ruby set ts=2 sw=2 sts=2
+  autocmd FileType html set spell
+  autocmd BufNewFile,BufRead *.tex set ft=tex
+  autocmd BufNewFile,BufRead *.tex map ,b :w\|:!pdflatex %<cr>
+  autocmd WinEnter * :wincmd |
+  autocmd WinEnter * :wincmd _
 augroup END
