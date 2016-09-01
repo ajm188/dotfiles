@@ -3,7 +3,7 @@
 function rvm --description='Ruby enVironment Manager'
     # run RVM and capture the resulting environment
     set --local env_file (mktemp -t rvm.fish.XXXXXXXXXX)
-    bash -c 'source ~/.rvm/scripts/rvm; rvm "$@"; status=$?; env > "$0"; exit $status' $env_file $argv
+    bash -c 'source ~/.rvm/scripts/rvm; rvm "$@" 2>/dev/null; status=$?; env > "$0"; exit $status' $env_file $argv
 
     # apply rvm_* and *PATH variables from the captured environment
     and eval (grep '^rvm\|^[^=]*PATH\|^GEM_HOME' $env_file | grep -v '_clr=' | sed '/^[^=]*PATH/s/:/" "/g; s/^/set -xg /; s/=/ "/; s/$/" ;/; s/(//; s/)//')
