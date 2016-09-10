@@ -2,6 +2,7 @@
     # stage
     a = add
     aa = add --all
+    au = add -u
     unstage = reset HEAD --
 
     # commit
