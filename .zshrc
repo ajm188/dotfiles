@@ -38,23 +38,26 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
+export MANPATH="/usr/local/man:$MANPATH"
+export EDITOR='vim'
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+if [ -d "/opt/local/" ]; then
+    export PATH="/opt/local/bin":"/opt/local/sbin":$PATH
+    export MANPATH="/opt/local/share/man":$MANPATH
+fi
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+local_bins=(
+    .cabal
+    .cargo
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
+    bin
+)
+for bindir in $local_bins; do
+    binpath="$HOME/$bindir"
+    if [ -d $binpath ]; then
+        export PATH=$binpath:$PATH
+    fi
+done
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
