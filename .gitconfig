@@ -30,6 +30,7 @@
     rsu = remote set-url
 
     sync = "!sync() { upstream=${1:-\"upstream\"}; master=${2:-\"master\"}; git pull $upstream $master && git push origin HEAD; }; sync"
+    author-stats = "!stats() { git log --author=$1 --pretty=tformat: --numstat | gawk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf \"added lines: %s removed lines: %s total lines: %s\\n\", add, subs, loc }' -; }; stats"
 
     # status and logs
     lol = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold yellow)%h%C(reset) - %C(bold green)(%ar)%C(reset) %s - %C(bold blue)%an%C(reset)%C(bold red)%d%C(reset)' --all
