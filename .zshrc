@@ -32,11 +32,14 @@ plugins=(
     docker-compose
     git
     macports
+    rvm
 )
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+
+source $HOME/.rvm/scripts/rvm
 
 export MANPATH="/usr/local/man:$MANPATH"
 export EDITOR='vim'
