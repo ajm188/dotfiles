@@ -50,8 +50,8 @@ if [ -d "/opt/local/" ]; then
 fi
 
 local_bins=(
-    .cabal
-    .cargo
+    .cabal/bin
+    .cargo/bin
 
     bin
 )
