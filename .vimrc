@@ -89,6 +89,7 @@ augroup configgroup
   autocmd BufNewFile,BufRead *.md set filetype=markdown spell
   autocmd BufEnter Makefile set noexpandtab
   autocmd FileType ruby set ts=2 sw=2 sts=2
+  autocmd FileType cucumber set ts=2 sw=2 sts=2
   autocmd FileType html set spell
   autocmd BufNewFile,BufRead *.tex set ft=tex
   autocmd BufNewFile,BufRead *.tex map ,b :w\|:!pdflatex %<cr>
