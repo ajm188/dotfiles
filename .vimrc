@@ -38,11 +38,7 @@ set statusline=%<%f\ (%{&ft})\ [%{&ff}][%{&fenc}]%(%m%)%=%-10(%3l,%02c%03V%)
 " SYNTAX HL AND COLOR "
 syntax enable
 set background=dark
-let g:solarized_termcolors=256
-if !has('gui_running')
-    let g:solarized_termtrans=1
-endif
-colorscheme solarized
+colorscheme industry
 
 " GENERAL CONFIG "
 set number
