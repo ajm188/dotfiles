@@ -72,3 +72,6 @@ export GOPATH=$HOME/dev/go
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias gp='git push origin HEAD'
+alias gpp='git push --force-with-lease origin HEAD'
+alias gpt='gp --tags'
