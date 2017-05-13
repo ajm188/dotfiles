@@ -75,3 +75,5 @@ export GOPATH=$HOME/dev/go
 alias gp='git push origin HEAD'
 alias gpp='git push --force-with-lease origin HEAD'
 alias gpt='gp --tags'
+
+alias reload='source ~/.zshrc'
