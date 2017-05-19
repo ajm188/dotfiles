@@ -39,7 +39,9 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-source $HOME/.rvm/scripts/rvm
+if [ -f $HOME/.rvm/scripts/rvm ]; then
+    source $HOME/.rvm/scripts/rvm
+fi
 
 export MANPATH="/usr/local/man:$MANPATH"
 export EDITOR='vim'
@@ -77,3 +79,4 @@ alias gpp='git push --force-with-lease origin HEAD'
 alias gpt='gp --tags'
 
 alias reload='source ~/.zshrc'
+alias fix-ssh='export $(tmux show-environment | grep \^SSH_AUTH_SOCK=)'
