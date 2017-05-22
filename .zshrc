@@ -77,6 +77,7 @@ export GOPATH=$HOME/dev/go
 alias gp='git push origin HEAD'
 alias gpp='git push --force-with-lease origin HEAD'
 alias gpt='gp --tags'
+alias gg='git grep'
 
 alias reload='source ~/.zshrc'
 alias fix-ssh='export $(tmux show-environment | grep \^SSH_AUTH_SOCK=)'
