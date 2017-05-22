@@ -23,6 +23,7 @@
     b = branch
     co = checkout
     m = merge
+    M = merge --no-ff
     rb = rebase
 
     # remotes
