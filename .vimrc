@@ -1,5 +1,6 @@
 set nocompatible
 filetype off
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 filetype plugin indent on
 
