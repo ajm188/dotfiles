@@ -45,6 +45,7 @@ for completion in $custom_completions; do
         fpath=($compdir $fpath)
     fi
 done
+unset completion
 
 source $ZSH/oh-my-zsh.sh
 
@@ -75,6 +76,7 @@ for bindir in $local_bins; do
         export PATH=$binpath:$PATH
     fi
 done
+unset bindir
 
 export GOPATH=$HOME/dev/go
 
