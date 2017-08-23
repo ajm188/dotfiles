@@ -35,6 +35,17 @@ plugins=(
     rvm
 )
 
+# Set up fpath for custom completions prior to compinit
+custom_completions=(
+    .rg/complete
+)
+for completion in $custom_completions; do
+    compdir="$HOME/$completion"
+    if [ -d $compdir ]; then
+        fpath=($compdir $fpath)
+    fi
+done
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -56,6 +67,7 @@ local_bins=(
     .cargo/bin
 
     bin
+    .rg
 )
 for bindir in $local_bins; do
     binpath="$HOME/$bindir"
@@ -81,3 +93,5 @@ alias gg='git grep'
 
 alias reload='source ~/.zshrc'
 alias fix-ssh='export $(tmux show-environment | grep \^SSH_AUTH_SOCK=)'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
