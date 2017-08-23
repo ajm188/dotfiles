@@ -1,3 +1,9 @@
 [submodule ".vim/bundle/vim-pathogen"]
 	path = .vim/bundle/vim-pathogen
 	url = gh:tpope/vim-pathogen
+[submodule ".vim/bundle/fzf.vim"]
+	path = .vim/bundle/fzf.vim
+	url = gh:junegunn/fzf.vim
+[submodule ".vim/bundle/fzf"]
+	path = .vim/bundle/fzf
+	url = gh:junegunn/fzf
