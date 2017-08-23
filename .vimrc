@@ -34,7 +34,7 @@ set incsearch
 " STATUSLINE "
 " Left column: filename, plus file type, format, encoding and mod status
 " Right column: line and column number, shifted left a bit
-set statusline=%<%f\ (%{&ft})\ [%{&ff}][%{&fenc}]%(%m%)%=%-10(%3l,%02c%03V%)
+set statusline=%<%f\ (%{&ft})\ %{fugitive#statusline()}%(%m%)%=%-10(%3l,%02c%03V%)
 
 " SYNTAX HL AND COLOR "
 syntax enable
