@@ -77,6 +77,13 @@ set backspace=indent,eol,start
 " More keymappings in language-specific files
 nnoremap <leader><leader> <c-^> " Quickly switch between current/prev buffers
 
+nnoremap <leader>ff :Files<cr>
+nnoremap <leader>fgs :GFiles?<cr>
+nnoremap <leader>fbu :Buffers<cr>
+nnoremap <leader>fgc :Commits<cr>
+nnoremap <leader>fgb :BCommits<cr>
+nnoremap <leader>fm :Maps<cr>
+
 " AUTOCMDS "
 augroup configgroup
   au!
