@@ -84,6 +84,9 @@ nnoremap <leader>fgc :Commits<cr>
 nnoremap <leader>fgb :BCommits<cr>
 nnoremap <leader>fm :Maps<cr>
 
+nnoremap <leader>g :Goyo<cr>
+nnoremap <leader>l :Limelight!!<cr>
+
 " AUTOCMDS "
 augroup configgroup
   au!
