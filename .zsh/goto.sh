@@ -1,7 +1,7 @@
 function goto() {
     local project="$1"
 
-    [[ $(tmux has -t $project 2>/dev/null) ]] || _tmux_create $project
+    [[ -z $(tmux has -t $project 2>&1) ]] || _tmux_create $project
     _tmux_attach $project
 }
 
