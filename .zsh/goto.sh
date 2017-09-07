@@ -23,3 +23,5 @@ function _tmux_attach() {
         tmux attach -t $project
     fi
 }
+
+compdef '_files -W $GOTO_PROJECT_DIR/' goto
