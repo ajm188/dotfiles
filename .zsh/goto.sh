@@ -28,4 +28,4 @@ function _goto_base_dir() {
     echo "$HOME"
 }
 
-compdef '_files -W $GOTO_PROJECT_DIR/' goto
+compdef '_files -W $(_goto_base_dir)' goto
