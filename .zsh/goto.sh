@@ -17,7 +17,7 @@ function _tmux_create() {
 function _tmux_attach() {
     local project="$1"
 
-    if [ -n $TMUX ]; then
+    if [[ -n $TMUX ]]; then
         tmux switch -t $project
     else
         tmux attach -t $project
