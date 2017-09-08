@@ -34,4 +34,12 @@ function _tmux_ls() {
     echo "$sessions"
 }
 
-compdef '_alternative "sessions:custom sessions:($(_tmux_ls read -d 0 -A))" "files:filenames:_files -W $(_goto_base_dir)"' goto
+function _sessions_comp() {
+    echo '"sessions:custom sessions:($(_tmux_ls read -d 0 -A))"'
+}
+
+function _projects_comp() {
+    echo '"files:filenames:_files -W $(_goto_base_dir)"'
+}
+
+compdef "_alternative $(_sessions_comp) $(_projects_comp)" goto
