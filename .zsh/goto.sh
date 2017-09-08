@@ -28,4 +28,10 @@ function _goto_base_dir() {
     echo "$HOME"
 }
 
+function _tmux_ls() {
+    local sessions=$(tmux ls 2>/dev/null | cut -d ':' -f1)
+    [[ -z $sessions ]] && return 0
+    echo "$sessions"
+}
+
 compdef '_files -W $(_goto_base_dir)' goto
