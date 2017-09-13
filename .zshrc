@@ -98,5 +98,6 @@ alias fix-ssh='export $(tmux show-environment | grep \^SSH_AUTH_SOCK=)'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 if (which rg >/dev/null); then
+    alias rgg='rg --hidden -g \!.git'
     export FZF_DEFAULT_COMMAND='rg --hidden -g \!.git -l ""'
 fi
