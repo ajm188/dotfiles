@@ -101,3 +101,6 @@ if (which rg >/dev/null); then
     alias rgg='rg --hidden -g \!.git'
     export FZF_DEFAULT_COMMAND='rg --hidden -g \!.git -l ""'
 fi
+
+alias v='vim $(fzf)'
+alias j='goto'
