@@ -19,3 +19,9 @@
 [submodule ".vim/bundle/limelight.vim"]
 	path = .vim/bundle/limelight.vim
 	url = gh:junegunn/limelight.vim
+[submodule ".vim/bundle/vim-lucius"]
+	path = .vim/bundle/vim-lucius
+	url = gh:jonathanfilip/vim-lucius
+[submodule ".vim/bundle/minimalist"]
+	path = .vim/bundle/minimalist
+	url = gh:dikiaap/minimalist
