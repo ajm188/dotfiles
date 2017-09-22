@@ -25,3 +25,21 @@
 [submodule ".vim/bundle/minimalist"]
 	path = .vim/bundle/minimalist
 	url = gh:dikiaap/minimalist
+[submodule ".vim/bundle/termschool-vim-theme"]
+	path = .vim/bundle/termschool-vim-theme
+	url = gh:marcopaganini/termschool-vim-theme
+[submodule ".vim/bundle/vim-gotham"]
+	path = .vim/bundle/vim-gotham
+	url = gh:whatyouhide/vim-gotham
+[submodule ".vim/bundle/focuspoint-vim"]
+	path = .vim/bundle/focuspoint-vim
+	url = gh:chase/focuspoint-vim
+[submodule ".vim/bundle/vim-deep-space"]
+	path = .vim/bundle/vim-deep-space
+	url = gh:tyrannicaltoucan/vim-deep-space
+[submodule ".vim/bundle/angr.vim"]
+	path = .vim/bundle/angr.vim
+	url = gh:zacanger/angr.vim
+[submodule ".vim/bundle/Alduin"]
+	path = .vim/bundle/Alduin
+	url = gh:AlessandroYorba/Alduin
