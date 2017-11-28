@@ -43,3 +43,6 @@
 [submodule ".vim/bundle/Alduin"]
 	path = .vim/bundle/Alduin
 	url = gh:AlessandroYorba/Alduin
+[submodule ".vim/bundle/sideways.vim"]
+	path = .vim/bundle/sideways.vim
+	url = gh:AndrewRadev/sideways.vim
