@@ -95,7 +95,7 @@ augroup configgroup
   autocmd FileType python source ~/.vim/python.vim
   autocmd FileType go source ~/.vim/go.vim
   autocmd BufNewFile,BufRead COMMIT_EDITMSG set spell
-  autocmd BufNewFile,BufRead *.md set filetype=markdown spell
+  autocmd BufNewFile,BufRead *.md set filetype=markdown spell textwidth=0
   autocmd BufEnter Makefile set noexpandtab
   autocmd FileType ruby set ts=2 sw=2 sts=2
   autocmd FileType cucumber set ts=2 sw=2 sts=2
