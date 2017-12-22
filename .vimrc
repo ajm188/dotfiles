@@ -45,6 +45,8 @@ colorscheme industry
 set number
 set showcmd
 set autoread
+set cursorcolumn
+set cursorline
 
 set laststatus=2
 set showtabline=1
