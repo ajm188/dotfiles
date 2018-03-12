@@ -82,6 +82,8 @@ for bindir in $local_bins; do
 done
 unset bindir
 
+export GOTO_PROJECT_DIR=$HOME/dev
+source $HOME/dotfiles/.zsh/goto.sh
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
