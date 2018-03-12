@@ -95,3 +95,6 @@ complete -o default -o nospace -F _git g
 alias v=vim
 
 export PS1="\[$bold_green\]\u@\h:\[$bold_yellow\]\w \[$hi_bold_blue\]"'$(git_sha)'"\[$hi_bold_green\]"'$(prompt_char)'"\[$reset\] "
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
