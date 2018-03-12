@@ -37,9 +37,13 @@ set incsearch
 set statusline=%<%f\ (%{&ft})\ %{fugitive#statusline()}%(%m%)%=%-10(%3l,%02c%03V%)
 
 " SYNTAX HL AND COLOR "
+" colorschemes that don't muck with my transparent term:
+"   default
+"   deep-space
+"   angr
 syntax enable
 set background=dark
-colorscheme industry
+colorscheme default
 
 " GENERAL CONFIG "
 set number
