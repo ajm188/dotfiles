@@ -43,7 +43,7 @@ set statusline=%<%f\ (%{&ft})\ %{fugitive#statusline()}%(%m%)%=%-10(%3l,%02c%03V
 "   angr
 syntax enable
 set background=dark
-colorscheme default
+colorscheme falcon
 
 " GENERAL CONFIG "
 set number

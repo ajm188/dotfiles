@@ -49,3 +49,6 @@
 [submodule ".vim/bundle/puppet-syntax-vim"]
 	path = .vim/bundle/puppet-syntax-vim
 	url = gh:puppetlabs/puppet-syntax-vim
+[submodule ".vim/bundle/falcon"]
+	path = .vim/bundle/falcon
+	url = gh:fenetikm/falcon
