@@ -41,6 +41,7 @@ set statusline=%<%f\ (%{&ft})\ %{fugitive#statusline()}%(%m%)%=%-10(%3l,%02c%03V
 "   default
 "   deep-space
 "   angr
+set t_Co=256
 syntax enable
 set background=dark
 colorscheme falcon
