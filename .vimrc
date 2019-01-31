@@ -50,7 +50,6 @@ colorscheme falcon
 set number
 set showcmd
 set autoread
-set cursorcolumn
 set cursorline
 
 set laststatus=2
@@ -107,6 +106,7 @@ augroup configgroup
   autocmd FileType ruby set ts=2 sw=2 sts=2
   autocmd FileType cucumber set ts=2 sw=2 sts=2
   autocmd FileType html set spell
+  autocmd FileType tf set ts=2 sw=2 sts=2 smartindent
   autocmd BufNewFile,BufRead *.tex set ft=tex
   autocmd BufNewFile,BufRead *.tex map ,b :w\|:!pdflatex %<cr>
 augroup END
