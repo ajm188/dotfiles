@@ -1,5 +1,4 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -47,6 +46,7 @@ for completion in $custom_completions; do
 done
 unset completion
 
+export ZSH=$HOME/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
