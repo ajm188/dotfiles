@@ -31,7 +31,6 @@ plugins=(
     docker-compose
     git
     macports
-    rvm
 )
 
 # Set up fpath for custom completions prior to compinit
@@ -50,10 +49,6 @@ export ZSH=$HOME/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
-if [ -f $HOME/.rvm/scripts/rvm ]; then
-    source $HOME/.rvm/scripts/rvm
-fi
 
 export MANPATH="/usr/local/man:$MANPATH"
 export EDITOR='vim'
@@ -108,9 +103,5 @@ if (which rg >/dev/null); then
 fi
 
 alias v='vim $(fzf)'
-alias j='goto'
 
-ssh-add -K >/dev/null 2>&1
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
