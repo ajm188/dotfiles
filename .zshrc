@@ -3,7 +3,27 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster" # Need a https://github.com/powerline/fonts font for this
+export TERM="xterm-256color"
+ZSH_THEME="powerlevel9k/powerlevel9k" # Need a https://github.com/powerline/fonts font for this
+
+function new_joke() { export DAD_JOKE="$(curl -s https://icanhazdadjoke.com)" }
+new_joke
+
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="╰─$ "
+
+POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='orange1'
+POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='yellow1'
+
+POWERLEVEL9K_TIME_FORMAT="%D{%y-%m-%dT%H:%M:%S}"
+
+POWERLEVEL9K_CUSTOM_JOKE='echo $DAD_JOKE'
+POWERLEVEL9K_CUSTOM_JOKE_BACKGROUND='black'
+POWERLEVEL9K_CUSTOM_JOKE_FOREGROUND='white'
+
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_joke newline context dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status load time)
+
 DEFAULT_USER="mason"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
