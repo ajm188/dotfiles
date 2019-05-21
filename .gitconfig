@@ -9,6 +9,7 @@
     ci = commit -v
     cia = commit -v --amend
     cm = commit -m
+    credit = "!credit() { git commit --amend --author \"$1 <$2>\" -C HEAD; }; credit"
 
     # diffs
     d = diff
