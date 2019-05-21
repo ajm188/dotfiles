@@ -46,3 +46,5 @@ if yesno "Do you want to setup .tmux.conf?"; then
     ln -fs $wd/.tmux.conf $HOME/.tmux.conf
     echo 'updated .tmux.conf. you should restart sessions to have the changes take affect'
 fi
+
+ls $wd/scripts/bin | xargs -{} cp $wd/scripts/bin/{} ~/bin/{}

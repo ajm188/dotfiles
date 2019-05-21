@@ -37,6 +37,7 @@
     thanks = "!thanks() { git log --format='%an' \"$@\" | sort | uniq -c | sort -rn | sed 's/ *\\([0-9]\\{1,\\}\\) \\(.*\\)/\\2 (\\1)/'; }; thanks"
 
     # status and logs
+    changelog = !changelog.sh
     lol = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold yellow)%h%C(reset) - %C(bold green)(%ar)%C(reset) %s - %C(bold blue)%an%C(reset)%C(bold red)%d%C(reset)' --all
     s = status -s
     sha = rev-parse --short
