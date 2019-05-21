@@ -51,6 +51,8 @@ plugins=(
     docker-compose
     git
     macports
+
+    desk
 )
 
 # Set up fpath for custom completions prior to compinit
