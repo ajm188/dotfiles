@@ -34,6 +34,7 @@
     author-stats = "!stats() { git log --author=$1 --pretty=tformat: --numstat | gawk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf \"added lines: %s removed lines: %s total lines: %s\\n\", add, subs, loc }' -; }; stats"
     # From: https://github.com/garybernhardt/dotfiles/blob/master/bin/git-churn
     churn = "!churn() { git log --all -M -C --name-only --format='format:' \"$@\" | sort | grep -v '^$' | uniq -c | sort -n; }; churn"
+    related = !git-related
     thanks = "!thanks() { git log --format='%an' \"$@\" | sort | uniq -c | sort -rn | sed 's/ *\\([0-9]\\{1,\\}\\) \\(.*\\)/\\2 (\\1)/'; }; thanks"
 
     # status and logs
