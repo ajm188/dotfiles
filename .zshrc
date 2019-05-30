@@ -124,6 +124,12 @@ if (which rg >/dev/null); then
     export FZF_DEFAULT_COMMAND='rg --hidden -g \!.git -l ""'
 fi
 
+export SMAN_APPEND_HISTORY=false
+export SMAN_SNIPPET_DIR="$DOTFILES_ROOT/sman/"
+export SMAN_EXEC_CONFIRM=false
+export SMAN_LS_COLOR_FILES=1,4,35
+[ -f $GOPATH/src/github.com/tokozedg/sman/sman.rc ] && source $GOPATH/src/github.com/tokozedg/sman/sman.rc
+
 alias v='vim $(fzf)'
 
 
