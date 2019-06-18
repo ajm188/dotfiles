@@ -15,12 +15,7 @@ yesno () {
 # vim
 if yesno "Do you want to install .vimrc + .vim?"; then
     ln -fs $wd/.vim $HOME/.vim
-    if [ ! -d $HOME/.vim/bundle/Vundle.vim ]; then
-      # give the people vundle if they don't have it
-          git clone git@github.com:gmarik/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
-    fi
     ln -fs $wd/.vimrc $HOME/.vimrc
-    vim +PluginInstall +qall
 fi
 
 # bash
@@ -47,4 +42,4 @@ if yesno "Do you want to setup .tmux.conf?"; then
     echo 'updated .tmux.conf. you should restart sessions to have the changes take affect'
 fi
 
-ls $wd/scripts/bin | xargs -{} cp $wd/scripts/bin/{} ~/bin/{}
+ls $wd/scripts/bin | xargs -I{} ln -fs $wd/scripts/bin/{} ~/bin/{}
