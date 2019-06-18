@@ -80,7 +80,7 @@ if [ -d "/opt/local/" ]; then
     export MANPATH="/opt/local/share/man":$MANPATH
 fi
 
-export GOPATH=$HOME/dev/go
+export GOPATH=$HOME/work/go
 
 local_bins=(
     .cabal/bin
@@ -99,8 +99,10 @@ for bindir in $local_bins; do
 done
 unset bindir
 
-export GOTO_PROJECT_DIR=$HOME/dev
-source $HOME/dotfiles/.zsh/goto.sh
+export DOTFILES_ROOT=$HOME/work/dotfiles
+
+export GOTO_PROJECT_DIR=$HOME/work
+source $DOTFILES_ROOT/.zsh/goto.sh
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
