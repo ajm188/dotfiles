@@ -57,7 +57,6 @@ plugins=(
 
 # Set up fpath for custom completions prior to compinit
 custom_completions=(
-    .rg/complete
 )
 for completion in $custom_completions; do
     compdir="$HOME/$completion"
@@ -89,7 +88,6 @@ local_bins=(
     dev/go/bin
 
     bin
-    .rg
 )
 for bindir in $local_bins; do
     binpath="$HOME/$bindir"
