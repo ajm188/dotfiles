@@ -53,6 +53,9 @@
     current = green bold
 [core]
     editor = vim
+	excludesfile = /Users/amason/.gitignore_global
+[fetch]
+    prune = true
 [github]
     user = ajm188
 [push]
@@ -61,4 +64,4 @@
     insteadOf = gh:
 [user]
     name = Andrew Mason
-    email = andrew@fixedpoint.xyz
+    email = amason@slack-corp.com
