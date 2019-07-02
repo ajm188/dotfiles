@@ -4,7 +4,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 export TERM="xterm-256color"
-ZSH_THEME="powerlevel9k/powerlevel9k" # Need a https://github.com/powerline/fonts font for this
+ZSH_THEME="powerlevel10k/powerlevel10k" # Need a https://github.com/powerline/fonts font for this
 
 function new_joke() { export DAD_JOKE="$(curl -s https://icanhazdadjoke.com)" }
 new_joke
