@@ -14,7 +14,7 @@ yesno () {
 
 # vim
 if yesno "Do you want to install .vimrc + .vim?"; then
-    ln -fs $wd/.vim $HOME/.vim
+    ln -fs $wd/.vim/* $HOME/.vim/
     ln -fs $wd/.vimrc $HOME/.vimrc
 fi
 
@@ -42,4 +42,5 @@ if yesno "Do you want to setup .tmux.conf?"; then
     echo 'updated .tmux.conf. you should restart sessions to have the changes take affect'
 fi
 
-ls $wd/scripts/bin | xargs -I{} ln -fs $wd/scripts/bin/{} ~/bin/{}
+mkdir -p ~/bin && \
+    ls $wd/scripts/bin | xargs -I{} ln -fs $wd/scripts/bin/{} ~/bin/{}
