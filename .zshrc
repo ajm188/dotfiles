@@ -21,7 +21,7 @@ POWERLEVEL9K_CUSTOM_JOKE='echo $DAD_JOKE'
 POWERLEVEL9K_CUSTOM_JOKE_BACKGROUND='black'
 POWERLEVEL9K_CUSTOM_JOKE_FOREGROUND='white'
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_joke newline context dir vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status load time)
 
 DEFAULT_USER="mason"
@@ -51,8 +51,6 @@ plugins=(
     docker-compose
     git
     macports
-
-    desk
 )
 
 # Set up fpath for custom completions prior to compinit
