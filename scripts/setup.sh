@@ -16,6 +16,7 @@ yesno () {
 if yesno "Do you want to install .vimrc + .vim?"; then
     ln -fs $wd/.vim/* $HOME/.vim/
     ln -fs $wd/.vimrc $HOME/.vimrc
+    git submodule init && git submodule update
 fi
 
 # bash
