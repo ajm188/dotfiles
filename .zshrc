@@ -113,6 +113,9 @@ alias gpp='git push --force-with-lease origin HEAD'
 alias gpt='gp --tags'
 alias gg='git grep'
 
+which_tmux=$(which tmux)
+alias tmux="$which_tmux -CC"
+
 alias reload='source ~/.zshrc'
 alias fix-ssh='export $(tmux show-environment | grep \^SSH_AUTH_SOCK=)'
 
