@@ -1,30 +1,16 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ssh-add -K 2>/dev/null
+
 export TERM="xterm-256color"
+export DOTFILES_ROOT=$HOME/work/dotfiles
+
 ZSH_THEME="powerlevel10k/powerlevel10k" # Need a https://github.com/powerline/fonts font for this
 
 function new_joke() { export DAD_JOKE="$(curl -s https://icanhazdadjoke.com)" }
-new_joke
 
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="╰─$ "
-
-POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='orange1'
-POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='yellow1'
-
-POWERLEVEL9K_TIME_FORMAT="%D{%y-%m-%dT%H:%M:%S}"
-
-POWERLEVEL9K_CUSTOM_JOKE='echo $DAD_JOKE'
-POWERLEVEL9K_CUSTOM_JOKE_BACKGROUND='black'
-POWERLEVEL9K_CUSTOM_JOKE_FOREGROUND='white'
-
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status load time)
-
-DEFAULT_USER="mason"
+source "${DOTFILES_ROOT}/.p10k.zsh"
+unset POWERLEVEL9K_CONTEXT_DEFAULT_CONTENT_EXPANSION
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -77,11 +63,12 @@ if [ -d "/opt/local/" ]; then
     export MANPATH="/opt/local/share/man":$MANPATH
 fi
 
-export GOPATH=$HOME/go
+export GOPATH=$HOME/work/go
+export PATH=$PATH:$GOPATH/bin
 
 local_bins=(
     .cabal/bin
-    .cargo/bin
+    .cargo/
 
     dev/go/bin
 
