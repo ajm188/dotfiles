@@ -1,0 +1,95 @@
+{
+    // Language-specific settings
+    "[go]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        },
+        "editor.rulers": [
+            80,
+            120
+        ]
+    },
+    "[go.mod]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
+
+    "go.useLanguageServer": true,
+    "go.vetOnSave": "off",
+    "go.buildOnSave": "off",
+   
+    "go.delveConfig": {
+        "followPointers": true,
+        "maxVariableRecurse": 1,
+        "maxStringLen": 500,
+        "maxArrayValues": 64,
+        "maxStructFields": -1,
+        "showGlobalVariables": true,
+    },
+    "gopls": {
+        // Add parameter placeholders when completing a function.
+        "usePlaceholders": true,
+        // If true, enable additional analyses with staticcheck.
+        // Warning: This will significantly increase memory usage.
+        "staticcheck": false,
+    },
+    "go.languageServerFlags": [
+        "-rpc.trace", // for more detailed debug logging
+        "serve",
+        "--debug=localhost:6060", // to investigate memory usage, see profiles
+    ],
+    "go.autocompleteUnimportedPackages": true,
+    "go.coverageOptions": "showUncoveredCodeOnly",
+    "go.coverOnSingleTest": true,
+    "go.coverOnSingleTestFile": true,
+    "go.useCodeSnippetsOnFunctionSuggest": true,
+    "go.lintOnSave": "package",
+
+    "[markdown]": {
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": false,
+        "editor.rulers": [
+            80,
+            100
+        ]
+    },
+
+    "[python]": {
+        "editor.rulers": [
+            100
+        ],
+    },
+    "python.formatting.provider": "black",
+    "python.linting.pylintEnabled": false,
+
+    "[shellscript]": {
+        "files.eol": "\n",
+        "editor.tabSize": 2
+    },
+    "shellcheck.disableVersionCheck": true,
+
+    // Fonts
+    "terminal.integrated.fontFamily": "'Andale Mono', 'Source Code Pro for Powerline'",
+    "editor.fontFamily": "'JetBrains Mono', Menlo, Monaco, 'Courier New', monospace",
+
+    // Misc
+    "extensions.ignoreRecommendations": true,
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "window.zoomLevel": 0,
+
+    // Silence the noise
+    "workbench.activityBar.visible": false,
+    "workbench.editor.showTabs": false,
+    "workbench.sideBar.location": "right",
+    "editor.minimap.enabled": false,
+    // Get rid of more UI
+    "workbench.iconTheme": null,
+    "workbench.statusBar.visible": false,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+}
