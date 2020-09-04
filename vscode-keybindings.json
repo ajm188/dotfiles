@@ -1,0 +1,31 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    // Activity bar
+    {
+        "key": "cmd+k cmd+e",
+        "command": "workbench.view.explorer",
+    },
+    {
+        "key": "cmd+k cmd+g",
+        "command": "workbench.view.scm",
+    },
+    {
+        "key": "cmd+k cmd+d",
+        "command": "workbench.view.debug",
+    },
+    {
+        "key": "cmd+k cmd+x",
+        "command": "workbench.extensions.action.showInstalledExtensions",
+    },
+    {
+        "key": "cmd+k cmd+b",
+        "command": "workbench.action.toggleSidebarVisibility",
+    },
+    
+    // Terminal
+    {
+        "key": "cmd+;",
+        "command": "workbench.action.terminal.newInActiveWorkspace"
+    },
+   
+]
