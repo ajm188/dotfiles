@@ -32,6 +32,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+    brew
     cargo
     docker
     docker-compose
@@ -73,6 +74,7 @@ local_bins=(
     dev/go/bin
 
     bin
+    .local/bin
 )
 for bindir in $local_bins; do
     binpath="$HOME/$bindir"
@@ -120,4 +122,12 @@ export SMAN_LS_COLOR_FILES=1,4,35
 
 alias v='vim $(fzf)'
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+which nvm >/dev/null 2>&1 && nvm use 14.15.3
+
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+export PATH="/usr/local/opt/openjdk@15/bin:$PATH"
+export CDPATH="$CDPATH:$HOME/work"
