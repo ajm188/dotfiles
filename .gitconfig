@@ -25,6 +25,7 @@
     co = checkout
     m = merge
     rb = rebase
+    br = for-each-ref --sort=committerdate refs/heads/ --format='%(committerdate:short) %(refname:short)'
 
     # remotes
     ra = remote add
@@ -62,6 +63,18 @@
     default = simple
 [url "git@github.com:"]
     insteadOf = gh:
+[url "git+ssh://git@github.com"]
+    insteadOf = "https://github.com"
+    insteadOf = "git://github.com"
 [user]
     name = Andrew Mason
-    email = amason@slack-corp.com
+    email = amason@hey.com
+[pull]
+	rebase = true
+[init]
+	defaultBranch = main
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
