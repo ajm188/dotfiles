@@ -21,6 +21,16 @@
         "key": "cmd+k cmd+b",
         "command": "workbench.action.toggleSidebarVisibility",
     },
+
+    // Editor
+    {
+        "key": "shift+cmd+\\",
+        "command": "workbench.action.splitEditor",
+    },
+    {
+        "key": "cmd+k cmd+f",
+        "command": "editor.foldAll",
+    },
     
     // Terminal
     {
@@ -28,4 +38,28 @@
         "command": "workbench.action.terminal.newInActiveWorkspace"
     },
    
+    // golang
+    {
+        "key": "cmd+g cmd+i",
+        "command": "go.impl.cursor",
+    },
+    {
+        "key": "cmd+g cmd+r",
+        "command": "go.languageserver.restart"
+    },
+
+    // vitess
+    // - doesn't work, not sure why (snippet is fine, keybinding is fine, together is sadness)
+    // {
+    //     "key": "cmd+a cmd+s",
+    //     "command": "editor.action.insertSnippet",
+    //     "args": {
+    //         "langId": "go",
+    //         "name": "vitess.copyright",
+    //     },
+    // },
+    {
+        "key": "cmd+r",
+        "command": "workbench.action.reloadWindow"
+    },
 ]
