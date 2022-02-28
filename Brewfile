@@ -13,7 +13,7 @@ brew "nmap"
 brew "pstree"
 brew "sqlite"
 brew "tree"
-cask "virtualbox"
+# cask "virtualbox" # not available for arm
 brew "wget"
 
 # Vitess stuff
